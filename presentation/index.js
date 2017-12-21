@@ -128,8 +128,7 @@ export default class Presentation extends React.Component {
 
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
           <BlockQuote>
-            <Quote>Example Quote</Quote>
-            <Cite>Author</Cite>
+            <Quote>Questions?</Quote>
           </BlockQuote>
         </Slide>
       </Deck>
