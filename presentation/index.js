@@ -119,7 +119,7 @@ export default class Presentation extends React.Component {
 
         <Slide bgColor="primary">
           <Heading size={2} fit caps textColor="tertiary">Why they Matter?</Heading>
-          <img style={{width: 800, marginTop: 20}} src={images.timeSpentOnDevices} />
+          <img style={{width: 800, marginTop: 20}} src={images.timeSpentOnDevices.replace("/", "")} />
         </Slide>
 
         {/* SLIDE 4 */}
@@ -241,7 +241,7 @@ export default class Presentation extends React.Component {
 
         {/* SLIDE 9 */}
         <SlideSet>
-          <Slide bgImage={images.youtube} bgColor="quarternary" bgDarken={0.8} textColor="primary">
+          <Slide bgImage={images.youtube.replace("/", "")} bgColor="quarternary" bgDarken={0.8} textColor="primary">
             <Heading size={2} fit caps textColor="primary">Resources for React Native</Heading>
             <List margin="20px 0 0">
               <Appear>
@@ -263,7 +263,7 @@ export default class Presentation extends React.Component {
           <Slide>
             <Layout>
               <Fill>
-                <img src={images.templateSuper} style={{ height: "700px", width: "396px" }} />
+                <img src={images.templateSuper.replace("/", "")} style={{ height: "700px", width: "396px" }} />
               </Fill>
               <Fill padding="0 0 0 20px">
                 <Heading size={4} textColor="tertiary" caps>Features</Heading>
