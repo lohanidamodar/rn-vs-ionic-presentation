@@ -22,7 +22,8 @@ import createTheme from "spectacle/lib/themes/default";
 
 const images = {
   ionicLogo: require('../assets/ionic.png'),
-  reactNativeLogo: require('../assets/react-native.svg')
+  reactNativeLogo: require('../assets/react-native.svg'),
+  timeSpentOnDevices: require('../assets/time-spent-on-mobile-devices.jpg')
 }
 
 // Require CSS
@@ -105,6 +106,13 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
         {/* SLIDE 3*/}
+
+        <Slide bgColor="primary">
+          <Heading size={2} fit caps textColor="tertiary">Why they Matter?</Heading>
+          <img style={{width: 800, marginTop: 20}} src={images.timeSpentOnDevices} />
+        </Slide>
+
+        {/* SLIDE 4 */}
         <Slide bgColor="secondary">
           <Heading size={2} fit caps textColor="quarternary">Why they Matter?</Heading>
           <Appear>
@@ -114,7 +122,7 @@ export default class Presentation extends React.Component {
           </Appear>
         </Slide>
 
-        {/* SLIDE 4 */}
+        {/* SLIDE 5 */}
         <Slide bgColor="primary" textColor="tertiary" bgDarken={0.2}>
           <Heading size={2} fit caps textColor="quarternary">How Do They Run?</Heading>
               <Appear>
@@ -149,7 +157,7 @@ export default class Presentation extends React.Component {
               </List>
         </Slide>
 
-        {/* SLIDE 5 */}
+        {/* SLIDE 6 */}
         <Slide transition={["fade"]} bgColor="quarternary" textColor="tertiary">
           <Heading size={2} fit caps textColor="tertiary">Cross Platform Compatibility</Heading>
           <Layout>
@@ -171,7 +179,7 @@ export default class Presentation extends React.Component {
             </Fill>
           </Layout>
         </Slide>
-        {/* SLIDE 6 */}
+        {/* SLIDE 7 */}
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
           <Heading size={2} fit caps textColor="quarternary">Components Library</Heading>
           <Layout>
@@ -192,7 +200,36 @@ export default class Presentation extends React.Component {
             </Fill>
           </Layout>
         </Slide>
-        {/* SLIDE 7 */}
+        {/* SLIDE 8 */}
+        <Slide bgColor="primary" textColor="tertiary">
+          <Heading size={2} fit caps textColor="tertiary">Which Should I Start?</Heading>
+          <List>
+            <Appear>
+              <ListItem>
+                I Already know Angular 2+
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                I Already know React
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                I Only Know Javascript
+              </ListItem>
+            </Appear>
+            
+            <Appear>
+              <ListItem>
+                React is a small library with much less learning curve
+              </ListItem>
+            </Appear>
+
+          </List>
+        </Slide>
+
+        {/* SLIDE 9 */}
         <Slide transition={["fade"]} bgColor="tertiary" textColor="primary">
           <BlockQuote>
             <Quote>Questions?</Quote>
