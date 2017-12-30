@@ -5,13 +5,14 @@ import React from "react";
 import {
   Appear,
   BlockQuote,
-  Cite,
+  Code,
   Deck,
   Heading,
   ListItem,
   List,
   Quote,
   Slide,
+  SlideSet,
   Text,
   Fill,
   Layout
@@ -23,7 +24,9 @@ import createTheme from "spectacle/lib/themes/default";
 const images = {
   ionicLogo: require('../assets/ionic.png'),
   reactNativeLogo: require('../assets/react-native.svg'),
-  timeSpentOnDevices: require('../assets/time-spent-on-mobile-devices.jpg')
+  timeSpentOnDevices: require('../assets/time-spent-on-mobile-devices.jpg'),
+  youtube: require('../assets/youtube-screenshot.png'),
+  templateSuper: require('../assets/super-starter.gif')
 }
 
 // Require CSS
@@ -62,8 +65,15 @@ export default class Presentation extends React.Component {
           </Layout>
           <Text margin="40px" textColor="primary">by <b>Damodar Lohani</b></Text>
           <Text margin="40px" textSize="30" textColor="quarternary"><u>
-            fb.me/lohanidamodar <br />
-            twitter.com/lohanidamodar <br />
+            <a style={{ color: "#2196F3" }} href="https://github.com/lohanidamodar" target="_blank">
+              github.com/lohanidamodar 
+            </a><br />
+            <a style={{ color: "#2196F3" }} href="https://fb.me/lohanidamodar" target="_blank">
+              fb.me/lohanidamodar
+            </a><br />
+            <a style={{ color: "#2196F3" }} href="https://twitter.com/lohanidamodar" target="_blank">
+              twitter.com/lohanidamodar
+            </a><br />
             dlohani48@gmail.com <br />
           </u></Text>
         </Slide>
@@ -74,9 +84,9 @@ export default class Presentation extends React.Component {
           </Heading>
           <List textColor="tertiary">
             <Appear>
-                <ListItem>
+              <ListItem>
                   I started as a designer
-                </ListItem>
+              </ListItem>
             </Appear>
             <Appear>
               <ListItem>
@@ -125,36 +135,36 @@ export default class Presentation extends React.Component {
         {/* SLIDE 5 */}
         <Slide bgColor="primary" textColor="tertiary" bgDarken={0.2}>
           <Heading size={2} fit caps textColor="quarternary">How Do They Run?</Heading>
-              <Appear>
-                <Heading size={6}>React Native</Heading>
-              </Appear>
-              <List>
-                <Appear>
-                  <ListItem>
+          <Appear>
+            <Heading size={6}>React Native</Heading>
+          </Appear>
+          <List>
+            <Appear>
+              <ListItem>
                     Native app, JS code for UI compiles to Native code with JS logic running on a JS thread hosted by React Native App.
-                  </ListItem>
-                </Appear>
-                <Appear>
-                  <ListItem>
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
                     Uses React for development.
-                  </ListItem>
-                </Appear>
-              </List>
-              <Appear>
-                <Heading size={6}>Ionic</Heading>
-              </Appear>
-              <List>
-                <Appear>
-                  <ListItem>
+              </ListItem>
+            </Appear>
+          </List>
+          <Appear>
+            <Heading size={6}>Ionic</Heading>
+          </Appear>
+          <List>
+            <Appear>
+              <ListItem>
                     Web app running on a web view wrapped by Native app that cccess native features via cordova using cordova plugins.
-                  </ListItem>
-                </Appear>
-                <Appear>
-                  <ListItem>
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
                     Uses Angular for development.
-                  </ListItem>
-                </Appear>
-              </List>
+              </ListItem>
+            </Appear>
+          </List>
         </Slide>
 
         {/* SLIDE 6 */}
@@ -230,6 +240,75 @@ export default class Presentation extends React.Component {
         </Slide>
 
         {/* SLIDE 9 */}
+        <SlideSet>
+          <Slide bgImage={images.youtube} bgColor="quarternary" bgDarken={0.8} textColor="primary">
+            <Heading size={2} fit caps textColor="primary">Resources for React Native</Heading>
+            <List margin="20px 0 0">
+              <Appear>
+                <ListItem
+                  textColor="tertiary"
+                  textSize={24}
+                >
+                  <a
+                    target="_blank"
+                    style={{ color: "#f0f0f0" }}
+                    href="https://www.youtube.com/channel/UCcG2wiL2veARLHpq-I-wZGA"
+                  >
+                    https://www.youtube.com/channel/UCcG2wiL2veARLHpq-I-wZGA
+                  </a>
+                </ListItem>
+              </Appear>
+            </List>
+          </Slide>
+          <Slide>
+            <Layout>
+              <Fill>
+                <img src={images.templateSuper} style={{ height: "700px", width: "396px" }} />
+              </Fill>
+              <Fill padding="0 0 0 20px">
+                <Heading size={4} textColor="tertiary" caps>Features</Heading>
+                <Text textSize={20} textColor="tertiary">
+                  <a target="_blank"
+                    href="https://github.com/lohanitech/react-native-template-super"
+                    style={{ color: "#fff" }}
+                  >
+                    https://github.com/lohanitech/react-native-template-super
+                  </a>
+                </Text>
+                <List>
+
+                  <Appear>
+                    <ListItem textSize={20} textColor="tertiary">
+                      Various prebuilt components
+                    </ListItem>
+                  </Appear>
+                  <Appear>
+                    <ListItem textSize={20} textColor="tertiary">
+                      Global styles and theme support
+                    </ListItem>
+                  </Appear>
+                  <Appear>
+                    <ListItem textSize={20} textColor="tertiary">
+                      State management with redux along with redux-persist
+                    </ListItem>
+                  </Appear>
+                  <Appear>
+                    <ListItem textSize={20} textColor="tertiary">
+                      Navigtion with react-navigation
+                    </ListItem>
+                  </Appear>
+                </List>
+                <Appear>
+                  <Text textColor="tertiary" textSize={24}>
+                    react-native init &lt;MyAwesomeProject&gt; --template super
+                  </Text>
+                </Appear>
+              </Fill>
+            </Layout>
+          </Slide>
+        </SlideSet>
+
+        {/* SLIDE 10 */}
         <Slide transition={["fade"]} bgColor="tertiary" textColor="primary">
           <BlockQuote>
             <Quote>Questions?</Quote>
